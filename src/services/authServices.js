@@ -4,13 +4,13 @@ const getSessionData = async () => {
             credentials: 'include'
         });
         if (!response.ok) {
-            window.location.href = `/login.php?site=yap`;
+            window.location.href = `https://liap.ca/login.php?site=yap`;
             return null;
         }
         return await response.json();
     } catch (error) {
         console.error('Session check failed:', error);
-        window.location.href = `/login.php?site=yap`;
+        window.location.href = `https://liap.ca/login.php?site=yap`;
         return null;
     }
 };
