@@ -3,14 +3,17 @@ const getSessionData = async () => {
         const response = await fetch('/check_session.php', {
             credentials: 'include'
         });
-        if (!response.ok) {
-            window.location.href = `https://liap.ca/login.php?site=yap-v`;
-            return null;
-        }
+        setTimeout( () => {
+            if (!response.ok) {
+                window.location.href = `https://liap.ca/login.php?site=yap-v`;
+                return null;
+            }
+        }, 1000)
+
         return await response.json();
     } catch (error) {
         console.error('Session check failed:', error);
-        window.location.href = `https://liap.ca/login.php?site=yap-v`;
+       // window.location.href = `https://liap.ca/login.php?site=yap-v`;
         return null;
     }
 };
