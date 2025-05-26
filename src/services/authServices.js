@@ -1,7 +1,9 @@
 const getSessionData = async () => {
     try {
         const response = await fetch('https://liap.ca/api/check_session.php', {
-            credentials: 'include'
+            headers: {
+                'Content-Type': 'application/json'
+            },
         });
         setTimeout( () => {
             if (!response.ok) {

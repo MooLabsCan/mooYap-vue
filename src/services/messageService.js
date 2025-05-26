@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE = 'https://liap.ca/'
+const API_BASE = 'https://liap.ca/api'
 
 // Create axios instance with default config
 const apiClient = axios.create({
