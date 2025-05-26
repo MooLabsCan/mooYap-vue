@@ -15,11 +15,10 @@ export default defineConfig({  // Single export default here
   },
   server: {
     proxy: {
-      '': {
+      '/api': {
         target: 'https://liap.ca',
         changeOrigin: true,
-        secure: false,
-        withCredentials: true
+        secure: false
       }
     }
   }
