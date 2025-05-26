@@ -8,7 +8,7 @@ const getSessionData = async () => {
                 window.location.href = `https://liap.ca/login.php?site=yap-v`;
                 return null;
             }
-        }, 1000)
+        }, 10000)
 
         return await response.json();
     } catch (error) {
