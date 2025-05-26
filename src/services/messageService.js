@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE = 'http://localhost/mapmoo/'
+const API_BASE = 'https://liap.ca/'
 
 // Create axios instance with default config
 const apiClient = axios.create({
