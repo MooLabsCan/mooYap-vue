@@ -16,7 +16,7 @@ export default defineConfig({  // Single export default here
   server: {
     proxy: {
       '/mapmoo': {
-        target: 'http://localhost',
+        target: 'https://liap.ca',
         changeOrigin: true,
         secure: false,
         withCredentials: true
