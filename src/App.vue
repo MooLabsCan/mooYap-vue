@@ -12,6 +12,7 @@ const showContacts = ref(false)
 const lang = ref('')
 const contacts = ref([])
 
+/*
 onMounted(async () => {
   const sessionData = await authService.getSessionData()
   if (sessionData && sessionData.status === 'authenticated') {
@@ -19,7 +20,7 @@ onMounted(async () => {
     lang.value = sessionData.user.lang
   }
 })
-
+*/
 const toggleContacts = async () => {
   if (!showContacts.value) {
     try {
@@ -48,7 +49,7 @@ const handleContactSelect = (contact) => {
 <template>
   <div v-if="currentUser" class="min-h-screen bg-gray-100">
     <TopBar 
-      :currentUser="currentUser"
+      :currentUser="Moo"
       :lang="lang"
       @toggle-contacts="toggleContacts"
       @toggle-lang="toggleLang"
