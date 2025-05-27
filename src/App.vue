@@ -5,6 +5,7 @@ import { messageService } from './services/messageService'
 import TopBar from './components/TopBar.vue'
 import ChatComponent from './components/ChatComponent.vue'
 import ContactsColumn from './components/ContactsColumn.vue'
+import { useRoute } from 'vue-router';
 
 const currentUser = ref(null)
 const chatPartner = ref('')
@@ -12,6 +13,12 @@ const showContacts = ref(false)
 const lang = ref('')
 const contacts = ref([])
 
+
+// Access query params
+const route = useRoute()
+const au = route.query.au
+
+console.log('au =', au)
 
 
 onMounted(async () => {
