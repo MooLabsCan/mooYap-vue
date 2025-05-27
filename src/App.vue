@@ -11,6 +11,8 @@ const chatPartner = ref('')
 const showContacts = ref(false)
 const lang = ref('')
 const contacts = ref([])
+const myValue = localStorage.getItem("mooToken");
+console.log(myValue);
 
 /*
 onMounted(async () => {

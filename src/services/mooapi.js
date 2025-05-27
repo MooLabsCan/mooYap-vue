@@ -1,11 +1,11 @@
-export async function loginUser(email, pw) {
+export async function loginUser(mat) {
     try {
         const response = await fetch('http://liap.ca/LiaBack/api/users/read.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ email, pw })
+            body: JSON.stringify({ mat })
         });
 
         if (!response.ok) {
