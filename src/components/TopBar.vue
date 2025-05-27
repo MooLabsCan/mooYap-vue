@@ -9,7 +9,8 @@ const props = defineProps({
   },
   currentUser: {
     type: String,
-    required: true
+    required: false,
+    default: 'none'
   }
 })
 
