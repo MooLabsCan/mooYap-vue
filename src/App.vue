@@ -47,7 +47,8 @@ const handleContactSelect = (contact) => {
 </script>
 
 <template>
-  <div v-if="currentUser" class="min-h-screen bg-gray-100">
+  <!-- <div v-if="currentUser" class="min-h-screen bg-gray-100"> -->
+  <div class="min-h-screen bg-gray-100">
     <TopBar
       :lang="lang"
       @toggle-contacts="toggleContacts"
