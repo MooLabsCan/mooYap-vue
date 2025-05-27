@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import {loginUser} from "@/mooapi.js";
 
 const props = defineProps({
   chatPartner: {
@@ -21,6 +22,13 @@ const toggleContacts = () => {
 const toggleLang = () => {
   emit('toggleLang')
 }
+async function handleLogin() {
+  const email = 'matt@liahonacontracting.com';
+  const pw = 'dotien';
+
+  const result = await loginUser(email, pw);
+  console.log('API result:', result);
+}
 </script>
 
 <template>
@@ -31,6 +39,7 @@ const toggleLang = () => {
           <font-awesome-icon :icon="['fas', 'user']" /> Contacts
         </button>
       </div>
+      <button @click="handleLogin">Login</button>
       <div class="title-container">
         <h1 class="title">{{ chatPartner || currentUser }}</h1>
       </div>
