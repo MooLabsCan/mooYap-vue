@@ -11,18 +11,19 @@ const chatPartner = ref('')
 const showContacts = ref(false)
 const lang = ref('')
 const contacts = ref([])
-const myValue = localStorage.getItem("mooToken");
-console.log(myValue);
 
-/*
+
+
 onMounted(async () => {
+
+  /*
   const sessionData = await authService.getSessionData()
   if (sessionData && sessionData.status === 'authenticated') {
     currentUser.value = sessionData.user.username
     lang.value = sessionData.user.lang
-  }
+  } */
 })
-*/
+
 const toggleContacts = async () => {
   if (!showContacts.value) {
     try {

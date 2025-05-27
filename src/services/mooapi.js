@@ -7,7 +7,8 @@ export async function loginUser(mat) {
             },
             body: JSON.stringify({ mat })
         });
-
+        const myValue = localStorage.getItem("mooToken");
+        console.log(myValue);
         if (!response.ok) {
             throw new Error(`Server error: ${response.status}`);
         }
